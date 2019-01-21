@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Happy Faces A</title>
+<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+body{
+background-color:#067b86;
+font-size:25px;
+}
+input{
+width:50px;
+text-align:center;
+}
+.row{
+background:orange;
+border:5px solid yellow;
+border-radius:20px;
+
+padding:50px;
+}
+h2 {
+background-color:orange;
+color:white;
+text-shadow:2px 2px #000;
+text-align:center;
+font-size:40px;
+padding:10px;
+font-family:'Hammersmith One', sans-serif;
+}
+
+.hidden{
+display:none;
+}
+.block {
+    display: block;
+    width: 90%;
+    border: none;
+    background-color: #ffffff8f;
+	font-family:Comic Sans, Comic Sans MS, cursive;
+    padding: 14px 28px;
+    font-size: 26px;
+    cursor: pointer;
+    text-align: center;
+}
+</style>
+
+</head>
+<body>
+<h2>Fibre to Fabric</h2>
+<br>
+<div class="container tab1">
+
+<div class="row" >
+			<div class="col-lg-6 col-sm-12" style="background:yellow; padding:30px; border-radius:10px; border:3px solid #ff8000; margin-bottom:30px;">
+			<h2>CLUES</h2>
+			1. The first true synthetic fibre.<br>
+			2. A blend of terylene and cotton fibre.<br>
+			3. An example of thermosetting plastic.<br>
+			
+			</div>
+			<div class="col-lg-6 col-sm-12" style="text-align:center;">
+				<input type="text" value="D" readonly id="" class=""><input type="text" value="P" readonly id="1" onclick="go(1)"class=""><input type="text" value="C" readonly id="" class=""><input type="text" value="H" readonly id="" class=""><input type="text" value="N" onclick="to(4)" readonly id="4" class=""><input type="text" value="A" readonly id="" class=""><input type="text" value="Z" readonly id="" class=""><input type="text" value="Y" readonly id="" class=""><br>
+				<input type="text" value="M" readonly id="" class=""><input type="text" value="W" readonly id="" class=""><input type="text" value="V" readonly id="2" onclick="go(2)"class=""><input type="text" value="S" readonly id="" class=""><input type="text" value="Y" onclick="to(5)"readonly id="5" class=""><input type="text" value="B" readonly id="" class=""><input type="text" value="S" readonly id="" class=""><input type="text" value="Q" readonly id="" class=""><br>
+				<input type="text" value="Y" readonly id="" class=""><input type="text" value="P" readonly id="" class=""><input type="text" value="E" readonly id="" class=""><input type="text" value="C" readonly id="3" onclick="go(3)"class=""><input type="text" value="L" onclick="to(6)"readonly id="6" class=""><input type="text" value="F" readonly id="" class=""><input type="text" value="G" readonly id="" class=""><input type="text" value="X" readonly id="" class=""><br>
+				<input type="text" value="G" readonly id="" class=""><input type="text" value="S" readonly id="" class=""><input type="text" value="R" readonly id="" class=""><input type="text" value="J" readonly id="" class=""><input type="text" value="O" onclick="to(7)"readonly id="7" class=""><input type="text" value="D" readonly id="" class=""><input type="text" value="T" readonly id="" class=""><input type="text" value="O" readonly id="" class=""><br>
+				<input type="text" value="F" readonly id="" class=""><input type="text" value="Y" readonly id="" class=""><input type="text" value="T" readonly id="" class=""><input type="text" value="P" readonly id="" class=""><input type="text" value="N" onclick="to(8)"readonly id="8" class=""><input type="text" value="W" readonly id="" class=""><input type="text" value="B" readonly id="" class=""><input type="text" value="Y" readonly id="" class=""><br>
+				<input type="text" value="T" readonly id="10" onclick="wo(10)" class=""><input type="text" value="E" readonly id="11" onclick="wo(11)" class=""><input type="text" value="R" readonly id="12" onclick="wo(12)" class=""><input type="text" value="R" readonly id="13" onclick="wo(13)" class=""><input type="text" value="I" readonly id="14" onclick="wo(14)" class=""><input type="text" value="C" readonly id="15" onclick="wo(15)" class=""><input type="text" value="O" readonly id="16" onclick="wo(16)" class=""><input type="text" value="T" readonly id="17" onclick="wo(17)" class=""><br>
+				<input type="text" value="Q" readonly id="" class=""><input type="text" value="H" readonly id="" class=""><input type="text" value="Y" readonly id="" class=""><input type="text" value="O" readonly id="" class=""><input type="text" value="C" readonly id="" class=""><input type="text" value="A" readonly id="" class=""><input type="text" value="O" readonly id="" class=""><input type="text" value="W" readonly id="" class=""><br>
+				<input type="text" value="S" readonly id="" class=""><input type="text" value="M" readonly id="" class=""><input type="text" value="U" readonly id="" class=""><input type="text" value="I" readonly id="" class=""><input type="text" value="V" readonly id="" class=""><input type="text" value="Z" readonly id="" class=""><input type="text" value="V" readonly id="" class=""><input type="text" value="Q" readonly id="" class=""><br>
+			</div>
+</div>
+	<br>
+<div class="row" >
+	<div class="col-sm-4">
+	<button class="block" onclick="window.location.reload()">Reset</button>
+	</div>
+	<div class="col-sm-4">
+	<button class="block" id="submit" onclick="check()">Submit</button>
+	</div>
+	<div class="col-sm-4">
+	<button class="block" onclick="solve()">Answer key</button>	
+	</div>
+</div>
+<br>
+</div>
+
+<div class="tab hidden" style>
+	<img src="items/Welldone.gif" width="90%" height="auto">
+</div>
+</div>
+<audio src="audio/try-again.mp3" id="audio2"></audio>
+<audio src="audio/well-done.mp3" id="audio1"></audio>
+<script>
+var count=0;
+function go(a){
+ $('#'+a).css('background','green');
+ $('#'+a).css('color','white');
+ count++;
+}
+function to(a){
+ $('#'+a).css('background','red');
+  $('#'+a).css('color','white');
+  count++;
+}
+function wo(a){
+ $('#'+a).css('background','blue');
+  $('#'+a).css('color','white');
+  count++;
+}
+function check() {
+if(count>=16){
+var audio = document.getElementById("audio1");
+       audio.play();
+setInterval(function(){ $('.tab1').addClass('hidden')
+$('h2').addClass('hidden')
+$('h3').addClass('hidden')
+	   $('.tab').removeClass('hidden')},1000);
+     } 
+	else{
+	var audio = document.getElementById("audio2");
+       audio.play();
+	}  
+}
+function solve(){
+$('#submit').attr('disabled',true);
+var i;
+for (i = 1; i < 4; i++) { 
+ go(i);
+}
+var j;
+for (j = 4; j < 9; j++) { 
+ to(j);
+}
+var k;
+for (k = 10; k < 18; k++) { 
+ wo(k);
+}
+}
+ 
+</script>
+</body>
+</html>
